@@ -26,5 +26,47 @@
         navbar: true
     });
 </script>
+    <form id="search-form">
+    <input type="search" id="search-input" name="q" placeholder="Buscar en el sitio..." autofocus>
+    <button type="submit">Buscar</button>
+</form>
+
+<script>
+    document.getElementById("search-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evitar que el formulario se envíe de forma predeterminada
+        
+        var query = document.getElementById("search-input").value.trim().toLowerCase(); // Obtener el valor de búsqueda, eliminar espacios en blanco y convertir a minúsculas
+        if (query !== "") {
+            search(query); // Llamar a la función de búsqueda si la consulta no está vacía
+        } else {
+            alert("Por favor, ingresa un término de búsqueda válido.");
+        }
+    });
+    
+    function search(query) {
+        // Definir las páginas web que quieres abrir según la búsqueda
+        switch(query) {
+            case "mas comics":
+                window.location.href = "mas_comics.html"; // Redirigir a la página mas_comics.html si la búsqueda coincide
+                break;
+            case "otros comics xd":
+                window.location.href = "otros_comics_xd.html"; // Redirigir a la página otros_comics_xd.html si la búsqueda coincide
+                break;
+            case "popular":
+                window.location.href = "popular1xdd.html"; // Redirigir a la página otros_comics_xd.html si la búsqueda coincide
+                break; 
+            case "rusia en guerra con ucrania":
+                window.location.href = "eeeeeee.html"; // Redirigir a la página rusiaenguerraconucrania.html si la búsqueda coincide
+                break;
+            case "scharez556":
+                window.location.href = "profile1.html"; // Redirigir a la página rusiaenguerraconucrania.html si la búsqueda coincide
+                break;
+            default:
+                alert("No se encontraron resultados para: " + query); // Mostrar un mensaje de alerta si no se encuentra ninguna coincidencia
+        }
+    }
+</script>
+    <p>¿Qué es Roquinia360?</p>
+    <p>Roquinia360 es un proyecto que consiste en permitir a los usuarios a visualizar los paisajes del país ficticio "Roquinia".</p>
 </body>
 </html>
