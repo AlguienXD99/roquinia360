@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visor 360°</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/photo-sphere-viewer/4.4.0/photo-sphere-viewer.min.js"></script>
+    <style>
+        #visor {
+            width: 100%;
+            height: 500px; /* Ajusta la altura */
+        }
+    </style>
+</head>
+<body>
+<h1>Visor 360°</h1>
+<div id="visor"></div>
+
+<script>
+    const visor = new PhotoSphereViewer.Viewer({
+        container: document.querySelector('#visor'),
+        panorama: 'plantilla_360.png', // Aquí va el nombre de tu imagen
+        navbar: true, // Opcional, muestra los controles
+        defaultZoomLvl: 50 // Zoom inicial
+    });
+</script>
+</body>
+</html>
