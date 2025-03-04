@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visor 360°</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photo-sphere-viewer/4.4.0/photo-sphere-viewer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@4.7.2"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core@4.7.2/index.css" rel="stylesheet">
     <style>
         #visor {
             width: 100%;
@@ -18,10 +19,10 @@
 
 <script>
     const visor = new PhotoSphereViewer.Viewer({
-        container: document.querySelector('#visor'),
-        panorama: 'plantilla_360.png', // Aquí va el nombre de tu imagen
-        navbar: true, // Opcional, muestra los controles
-        defaultZoomLvl: 50 // Zoom inicial
+        container: document.getElementById('visor'),
+        panorama: 'plantilla_360.png', // Nombre de tu imagen
+        defaultZoomLvl: 50, // Zoom inicial
+        navbar: true, // Barra de navegación visible
     });
 </script>
 </body>
